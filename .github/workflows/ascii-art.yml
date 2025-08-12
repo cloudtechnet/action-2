@@ -1,0 +1,22 @@
+name: Generate ASCII Artwork
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    ascii-art:
+        runs-on: ubuntu-latest
+
+        steps:
+            # step 1: Checout repository
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            # step 2: Create ASCII Artwork
+            - name: Create ASCII Artwork
+              run: |
+                mkdir -p ascii_output
+                figlet "Hello World" > ascii_output/art.txt
+                cat ascii_output/art.txt

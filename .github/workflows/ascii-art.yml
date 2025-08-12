@@ -20,5 +20,5 @@ jobs:
             - name: Create ASCII Artwork
               run: |
                 mkdir -p ascii_output
-                figlet "Hello World" > ascii_output/art.txt
+                figlet "I Love INDIA" > ascii_output/art.txt
                 cat ascii_output/art.txt

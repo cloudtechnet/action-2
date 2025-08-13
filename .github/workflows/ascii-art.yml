@@ -13,12 +13,6 @@ jobs:
             # step 1: Checout repository
             - name: Checkout repository
               uses: actions/checkout@v4
-            # step 2: Install figlet tool
-            - name: Install figlet
-              run: sudo apt-get install -y figlet
-            # step 3: Create ASCII Artwork
-            - name: Create ASCII Artwork
-              run: |
-                mkdir -p ascii_output
-                figlet "I Love INDIA" > ascii_output/art.txt
-                cat ascii_output/art.txt
+            # step 2: To Install figlet tool via shell script method
+            - name: Execute  Shell Script file
+              run: ./ascii-script.sh

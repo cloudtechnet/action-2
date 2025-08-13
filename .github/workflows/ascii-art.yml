@@ -15,4 +15,6 @@ jobs:
               uses: actions/checkout@v4
             # step 2: To Install figlet tool via shell script method
             - name: Execute  Shell Script file
-              run: ./.github/workflows/ascii-script.sh
+              run: |
+                chmod +x ./.github/workflows/ascii-script.sh
+                ./.github/workflows/ascii-script.sh

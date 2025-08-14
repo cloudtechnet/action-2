@@ -14,7 +14,7 @@ jobs:
       - name: Build Project
         run: |
           mkdir output
-          echo "Build completed successfully" > output/build-log.txt
+          echo "Build completed partially" > output/build-log.txt
 
       - name: Upload Build Output as Artifact
         uses: actions/upload-artifact@v4
